@@ -68,6 +68,7 @@
     "pify": "^3.0.0"
   },
   "devDependencies": {
+    "@types/node": "^6.0.40",
     "tslint": "^4.4.2",
     "typescript": "~2.2.0",
     "vscode": "^1.1.4"

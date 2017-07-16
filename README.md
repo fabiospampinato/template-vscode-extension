@@ -15,7 +15,7 @@ $ khaos install fabiospampinato/khaos-vscode-extension vscode-extension
 Create a new vscode extension with:
 
 ```
-$ khaos vscode-extension my-extension
+$ khaos create vscode-extension my-extension
 ```
 
 ## License

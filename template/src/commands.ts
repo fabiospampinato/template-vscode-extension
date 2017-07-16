@@ -9,7 +9,7 @@ import Utils from './utils';
 
 function command () {
 
-  alert ( 'Hello World!' );
+  vscode.window.showInformationMessage ( 'Hello World!' );
 
 }
 

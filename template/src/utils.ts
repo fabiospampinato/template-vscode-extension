@@ -1,6 +1,7 @@
 
 /* IMPORT */
 
+import * as _ from 'lodash';
 import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
 import * as path from 'path';

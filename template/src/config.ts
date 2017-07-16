@@ -19,7 +19,7 @@ const Config = {
 
   },
 
-  getExtension ( extension = 'projects' ) {
+  getExtension ( extension = '{{settingsName}}' ) {
 
     const config = vscode.workspace.getConfiguration ().get ( extension );
 

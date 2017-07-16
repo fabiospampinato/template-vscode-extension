@@ -14,7 +14,7 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "{{displayName}} - Option",
+      "title": "{{displayName}} - Configuration",
       "properties": {
         "{{settingsName}}.option": {
           "type": "boolean",

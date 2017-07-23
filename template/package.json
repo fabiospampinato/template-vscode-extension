@@ -60,8 +60,14 @@
     "vscode": "^1.10.0"
   },
 
-  "keywords": [],
-  "categories": [],
+  "keywords": [
+    "vscode",
+    "vsc",
+    "extension"
+  ],
+  "categories": [
+    "Other"
+  ],
 
 	"dependencies": {
     "lodash": "^4.17.4",

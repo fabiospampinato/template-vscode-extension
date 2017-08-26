@@ -57,7 +57,7 @@
     "url": "https://github.com/{{owner}}/{{name}}.git"
   },
   "engines": {
-    "vscode": "^1.10.0"
+    "vscode": "^1.15.0"
   },
 
   "keywords": [
@@ -70,6 +70,7 @@
   ],
 
 	"dependencies": {
+    "absolute": "0.0.1",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",
     "pify": "^3.0.0"

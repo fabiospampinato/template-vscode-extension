@@ -32,6 +32,12 @@ const Utils = {
 
   },
 
+  isInsiders () {
+
+    return !!vscode.env.appName.match ( /insiders/i );
+
+  },
+
   file: {
 
     open ( filepath ) {

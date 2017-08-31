@@ -1,13 +1,13 @@
-# khaos-vscode-extension
+# template-vscode-extension
 
-A Khaos template for starting a new vscode extension quickly.
+A template for starting a new vscode extension quickly.
 
 ## Install
 
-Save the template locally with:
+Install the template locally with:
 
 ```
-$ khaos install fabiospampinato/khaos-vscode-extension vscode-extension
+$ template install fabiospampinato/template-vscode-extension vscode-extension
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ $ khaos install fabiospampinato/khaos-vscode-extension vscode-extension
 Create a new vscode extension with:
 
 ```
-$ khaos create vscode-extension my-extension
+$ template create vscode-extension my-extension
 ```
 
 ## License

@@ -91,6 +91,18 @@ const Utils = {
 
       return pify ( fs.writeFile )( filepath, content, {} );
 
+    },
+
+    async delete ( filepath ) {
+
+      return pify ( fs.unlink )( filepath );
+
+    },
+
+    deleteSync ( filepath ) {
+
+      return fs.unlinkSync ( filepath );
+
     }
 
   },

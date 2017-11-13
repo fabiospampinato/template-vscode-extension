@@ -132,6 +132,16 @@ const Utils = {
 
     },
 
+    getAllRootPaths () {
+
+      const {workspaceFolders} = vscode.workspace;
+
+      if ( !workspaceFolders ) return [];
+
+      return workspaceFolders.map ( folder => folder.uri.fsPath );
+
+    },
+
     getRootPath ( basePath? ) {
 
       const {workspaceFolders} = vscode.workspace;

@@ -149,6 +149,15 @@ const Utils = {
 
     },
 
+    getActiveRootPath () {
+
+      const {activeTextEditor} = vscode.window,
+            editorPath = activeTextEditor && activeTextEditor.document.uri.fsPath;
+
+      return Utils.folder.getRootPath ( editorPath );
+
+    },
+
     getWrapperPath ( basePath, root? ) {
 
       const parentPath = () => Utils.folder.getParentPath ( basePath ),

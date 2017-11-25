@@ -34,7 +34,7 @@ It adds 1 command to the command palette:
 
 ![Demo](resources/demo.gif)
 
-## Hits:
+## Hints:
 
 - **HINT**: Add some hints
 

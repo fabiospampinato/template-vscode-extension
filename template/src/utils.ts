@@ -40,11 +40,11 @@ const Utils = {
 
   file: {
 
-    open ( filepath, isTextDocument = true ) {
+    open ( filePath, isTextDocument = true ) {
 
-      filepath = path.normalize ( filepath );
+      filePath = path.normalize ( filePath );
 
-      const fileuri = vscode.Uri.file ( filepath );
+      const fileuri = vscode.Uri.file ( filePath );
 
       if ( isTextDocument ) {
 
@@ -59,49 +59,49 @@ const Utils = {
 
     },
 
-    async make ( filepath, content ) {
+    async make ( filePath, content ) {
 
-      await pify ( mkdirp )( path.dirname ( filepath ) );
+      await pify ( mkdirp )( path.dirname ( filePath ) );
 
-      return Utils.file.write ( filepath, content );
+      return Utils.file.write ( filePath, content );
 
     },
 
-    async read ( filepath ) {
+    async read ( filePath ) {
 
       try {
-        return ( await pify ( fs.readFile )( filepath, { encoding: 'utf8' } ) ).toString ();
+        return ( await pify ( fs.readFile )( filePath, { encoding: 'utf8' } ) ).toString ();
       } catch ( e ) {
         return;
       }
 
     },
 
-    readSync ( filepath ) {
+    readSync ( filePath ) {
 
       try {
-        return ( fs.readFileSync ( filepath, { encoding: 'utf8' } ) ).toString ();
+        return ( fs.readFileSync ( filePath, { encoding: 'utf8' } ) ).toString ();
       } catch ( e ) {
         return;
       }
 
     },
 
-    async write ( filepath, content ) {
+    async write ( filePath, content ) {
 
-      return pify ( fs.writeFile )( filepath, content, {} );
-
-    },
-
-    async delete ( filepath ) {
-
-      return pify ( fs.unlink )( filepath );
+      return pify ( fs.writeFile )( filePath, content, {} );
 
     },
 
-    deleteSync ( filepath ) {
+    async delete ( filePath ) {
 
-      return fs.unlinkSync ( filepath );
+      return pify ( fs.unlink )( filePath );
+
+    },
+
+    deleteSync ( filePath ) {
+
+      return fs.unlinkSync ( filePath );
 
     }
 

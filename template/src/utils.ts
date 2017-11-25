@@ -109,16 +109,16 @@ const Utils = {
 
   folder: {
 
-    open ( folderpath, inNewWindow? ) {
+    open ( folderPath, inNewWindow? ) {
 
-      vscode.commands.executeCommand ( 'vscode.openFolder', vscode.Uri.parse ( `file://${folderpath}` ), inNewWindow );
+      vscode.commands.executeCommand ( 'vscode.openFolder', vscode.Uri.parse ( `file://${folderPath}` ), inNewWindow );
 
     },
 
-    exists ( folderpath ) {
+    exists ( folderPath ) {
 
       try {
-        fs.accessSync ( folderpath );
+        fs.accessSync ( folderPath );
         return true;
       } catch ( e ) {
         return false;

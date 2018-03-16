@@ -1,4 +1,4 @@
-# VSC {{displayName}}
+# {{displayName}}
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/{{owner}}/{{name}}/master/resources/logo-128x128.png" alt="Logo">

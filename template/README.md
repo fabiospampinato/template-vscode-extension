@@ -8,10 +8,10 @@
 
 ## Install
 
-Run the following in the command palette:
+Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName={{owner}}.{{name}}), or run the following in the command palette:
 
 ```shell
-ext install {{name}}
+ext install {{owner}}.{{name}}
 ```
 
 ## Usage

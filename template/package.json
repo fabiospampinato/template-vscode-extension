@@ -71,6 +71,7 @@
 
 	"dependencies": {
     "absolute": "0.0.1",
+    "chokidar": "^2.0.3",
     "json5": "^0.5.1",
     "lodash": "^4.17.4",
     "mkdirp": "^0.5.1",

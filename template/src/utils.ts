@@ -40,7 +40,7 @@ const Utils = {
 
   file: {
 
-    open ( filePath, isTextDocument = true ) {
+    open ( filePath, isTextDocument = true, lineNumber?: number ) {
 
       filePath = path.normalize ( filePath );
 
@@ -49,7 +49,16 @@ const Utils = {
       if ( isTextDocument ) {
 
         return vscode.workspace.openTextDocument ( fileuri )
-                                .then ( doc => vscode.window.showTextDocument ( doc, { preview: false } ) );
+                                .then ( doc => vscode.window.showTextDocument ( doc, { preview: false } ) )
+                                .then ( () => {
+                                  if ( _.isUndefined ( lineNumber ) ) return;
+                                  const textEditor = vscode.window.activeTextEditor;
+                                  if ( !textEditor ) return;
+                                  const pos = new vscode.Position ( lineNumber, 0 );
+                                  const selection = new vscode.Selection ( pos, pos );
+                                  textEditor.selection = selection;
+                                  textEditor.revealRange ( selection, vscode.TextEditorRevealType.Default );
+                                });
 
       } else {
 

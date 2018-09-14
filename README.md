@@ -6,7 +6,7 @@ A template for starting a new vscode extension quickly.
 
 Install the template locally with:
 
-```
+```sh
 template install fabiospampinato/template-vscode-extension vscode-extension
 ```
 
@@ -14,7 +14,7 @@ template install fabiospampinato/template-vscode-extension vscode-extension
 
 Create a new vscode extension with:
 
-```
+```sh
 template create vscode-extension my-extension
 ```
 

@@ -10,7 +10,7 @@
 
 Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName={{owner}}.{{name}}), or run the following in the command palette:
 
-```shell
+```sh
 ext install {{owner}}.{{name}}
 ```
 

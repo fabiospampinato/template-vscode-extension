@@ -35,3 +35,4 @@ Thumbs.db
 # Other paths to ignore
 bower_components
 node_modules
+package-lock.json

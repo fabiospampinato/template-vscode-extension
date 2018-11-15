@@ -71,6 +71,8 @@
   ],
 
 	"dependencies": {
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^6.0.40",
     "absolute": "0.0.1",
     "chokidar": "^2.0.3",
     "json5": "^0.5.1",
@@ -79,8 +81,6 @@
     "pify": "^3.0.0"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.116",
-    "@types/node": "^6.0.40",
     "ts-loader": "^5.2.1",
     "typescript": "^3.0.3",
     "vscode": "^1.1.4",

@@ -1,7 +1,7 @@
 # {{displayName}}
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/{{owner}}/{{name}}/master/resources/logo.png" width="128" alt="Logo">
+  <img src="https://raw.githubusercontent.com/{{owner}}/{{name}}/master/resources/logo.png" width="128" alt="Logo">
 </p>
 
 {{description}}

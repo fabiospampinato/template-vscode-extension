@@ -2,7 +2,6 @@
 /* IMPORT */
 
 import * as _ from 'lodash';
-import * as chokidar from 'chokidar';
 import * as JSON5 from 'json5';
 import * as os from 'os';
 import * as path from 'path';
@@ -92,7 +91,7 @@ const Config = {
   async onChangeListener () {
 
     let config = await Config.get (),
-        watcher;
+        watcher: vscode.FileSystemWatcher;
 
     async function handleChange () {
 
@@ -100,7 +99,7 @@ const Config = {
 
       if ( _.isEqual ( config, newConfig ) ) return;
 
-      if ( config.configPath !== newConfig.configPath ) watchChokidar ();
+      if ( config.configPath !== newConfig.configPath ) watchConfig ();
 
       config = newConfig;
 
@@ -108,11 +107,13 @@ const Config = {
 
     }
 
-    function watchChokidar () {
+    function watchConfig () {
 
-      if ( watcher ) watcher.close ();
+      if ( watcher ) watcher.dispose ();
 
-      watcher = chokidar.watch ( config.configPath ).on ( 'all', handleChange );
+      watcher = vscode.workspace.createFileSystemWatcher ( config.configPath );
+
+      watcher.onDidChange ( handleChange );
 
     }
 
@@ -122,7 +123,7 @@ const Config = {
 
     }
 
-    watchChokidar ();
+    watchConfig ();
     watchWorkspaceConfiguration ();
 
   },

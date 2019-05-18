@@ -19,7 +19,7 @@ const config = {
     vscode: 'commonjs vscode'
   },
   resolve: {
-    extensions: ['tsx', '.ts', '.jsx', '.js']
+    extensions: ['.tsx', '.ts', '.jsx', '.js']
   },
   module: {
     rules: [{

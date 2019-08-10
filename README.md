@@ -4,6 +4,8 @@ A template for starting a new vscode extension quickly.
 
 ## Install
 
+Install the [`template`](https://github.com/fabiospampinato/template) CLI tool in your system.
+
 Install the template locally with:
 
 ```sh

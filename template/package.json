@@ -1,13 +1,13 @@
 {
   "name": "{{#if scoped}}@{{owner}}/{{/if}}{{name}}",
   "displayName": "{{displayName}}",
+  "publisher": "{{owner}}",
   "repository": "github:{{owner}}/{{name}}",
   "description": "{{description}}",
   "icon": "resources/logo-128x128.png",
   "version": "{{version}}",
   "type": "module",
   "main": "dist/index.js",
-  "publisher": "{{owner}}",
   "activationEvents": [
     "*"
   ],

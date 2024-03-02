@@ -1,4 +1,5 @@
+resources/**/*.afdesign
+resources/**/*.afphoto
 resources/**/*.gif
 resources/**/*.mp4
-resources/**/*.psd
 src

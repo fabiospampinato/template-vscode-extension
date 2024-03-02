@@ -43,8 +43,6 @@
     "compile": "tsex compile",
     "debug": "code --extensionDevelopmentPath $PWD --inspect-extensions 9222",
     "package": "vsce package",
-    "package:dev": "scex -bs bundle:dev package",
-    "package:prod": "scex -bs bundle:prod package",
     "prepublishOnly": "scex -bs clean bundle:prod",
     "vscode:prepublish": "scex -bs clean bundle:prod",
     "dev": "scex -bs bundle:dev debug",

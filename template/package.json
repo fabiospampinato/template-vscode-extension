@@ -1,13 +1,13 @@
 {
-  "name": "{{#scoped}}@{{owner}}/{{/scoped}}{{name}}",
+  "name": "{{#if scoped}}@{{owner}}/{{/if}}{{name}}",
   "displayName": "{{displayName}}",
+  "repository": "github:{{owner}}/{{name}}",
   "description": "{{description}}",
   "icon": "resources/logo-128x128.png",
   "version": "{{version}}",
-  "license": "MIT",
-  "main": "out/extension.js",
+  "type": "module",
+  "main": "dist/index.js",
   "publisher": "{{owner}}",
-
   "activationEvents": [
     "*"
   ],
@@ -37,53 +37,36 @@
       }
     ]
   },
-
   "scripts": {
-    "vscode:prepublish": "rm -rf out && webpack --mode production",
-    "publish": "vsce publish && npm publish",
-    "compile": "webpack --mode development",
-    "compile:watch": "webpack --mode development --watch",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "bundle:dev": "tsex bundle --external vscode --format cjs --platform node --no-declare",
+    "bundle:prod": "tsex bundle --external vscode --format cjs --platform node --minify",
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "debug": "code --extensionDevelopmentPath $PWD --inspect-extensions 9229",
+    "package": "vsce package",
+    "package:dev": "scex -bs bundle:dev package",
+    "package:prod": "scex -bs bundle:prod package",
+    "prepublishOnly": "scex -bs clean bundle:prod",
+    "vscode:prepublish": "scex -bs clean bundle:prod",
+    "dev": "scex -bs bundle:dev debug",
+    "prod": "scex -bs bundle:prod debug"
   },
-  "bugs": {
-    "url": "https://github.com/{{owner}}/{{name}}/issues"
-  },
-  "author": {
-    "name": "{{author}}",
-    "email": "{{email}}"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/{{owner}}/{{name}}.git"
-  },
+  "categories": [
+    "Other"
+  ],
   "engines": {
-    "vscode": "^1.15.0"
+    "vscode": "^1.87.0"
   },
-
   "keywords": [
     "vscode",
     "vsc",
     "extension"
   ],
-  "categories": [
-    "Other"
-  ],
-
-  "dependencies": {
-    "@types/lodash": "^4.14.116",
-    "@types/node": "^6.0.40",
-    "absolute": "0.0.1",
-    "json5": "^0.5.1",
-    "lodash": "^4.17.4",
-    "mkdirp": "^0.5.1",
-    "pify": "^3.0.0"
-  },
   "devDependencies": {
-    "ts-loader": "^5.2.1",
-    "typescript": "^3.0.3",
-    "vscode": "^1.1.4",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "@types/vscode": "^1.87.0",
+    "esbuild": "0.20.1",
+    "scex": "^1.1.0",
+    "tsex": "^3.2.0",
+    "typescript": "^5.3.3"
   }
 }

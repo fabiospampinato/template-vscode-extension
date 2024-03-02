@@ -1,17 +1,15 @@
 
 /* IMPORT */
 
-import * as vscode from 'vscode';
-import Config from './config';
-import Utils from './utils';
+import vscode from 'vscode';
 
-/* COMMANDS */
+/* MAIN */
 
-function command () {
+const command = (): void => {
 
   vscode.window.showInformationMessage ( 'Hello World!' );
 
-}
+};
 
 /* EXPORT */
 

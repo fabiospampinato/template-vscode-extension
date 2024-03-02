@@ -1,8 +1,30 @@
 {
-  "variablesOrder": ["name", "displayName", "settingsName", "description", "version", "author", "owner", "email", "scoped"],
   "variables": {
+    "name": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "settingsName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
     "version": {
+      "type": "string",
       "default": "1.0.0"
+    },
+    "author": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "scoped": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -1,10 +1,4 @@
-**/*.map
-.gitignore
-.vscode-test/**
-.vscode/**
-out/test/**
-resources/*.gif
-resources/*.psd
-src/**
-test/**
-tsconfig.json
+resources/**/*.gif
+resources/**/*.mp4
+resources/**/*.psd
+src

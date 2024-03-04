@@ -19,7 +19,7 @@ ext install {{owner}}.{{name}}
 It adds 1 command to the command palette:
 
 ```js
-{{displayName}}: Command // Does something
+'{{displayName}}: Command' // Does something
 ```
 
 ## Settings

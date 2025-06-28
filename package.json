@@ -1,5 +1,6 @@
 {
   "private": true,
   "name": "template-vscode-extension",
+  "description": "A template for starting a new vscode extension quickly.",
   "type": "module"
 }

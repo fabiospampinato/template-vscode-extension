@@ -4,6 +4,7 @@
   "publisher": "{{owner}}",
   "repository": "github:{{owner}}/{{name}}",
   "description": "{{description}}",
+  "license": "MIT",
   "icon": "resources/logo-128x128.png",
   "version": "{{version}}",
   "main": "dist/index.js",
